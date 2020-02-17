@@ -1,4 +1,6 @@
+import os
 import logging
+
 from logging.handlers import SMTPHandler, RotatingFileHandler
 
 from flask import Flask
@@ -42,7 +44,7 @@ if not app.debug:
     file_handler.setLevel(logging.INFO)
     app.logger.addHandler(file_handler)
 
-    app.logger.setLevel(loggin.INFO)
+    app.logger.setLevel(logging.INFO)
     app.logger.info('Microblog startup')
 
 
