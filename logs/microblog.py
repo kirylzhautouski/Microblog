@@ -4,3 +4,6 @@
 2020-02-17 11:09:29,149 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:48]
 2020-02-17 11:13:01,532 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:48]
 2020-02-17 11:20:47,810 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:48]
+2020-02-17 11:48:43,753 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:48]
+2020-02-17 11:49:14,597 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:48]
+2020-02-17 11:56:24,382 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:48]
