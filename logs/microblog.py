@@ -92,3 +92,4 @@ Traceback (most recent call last):
     text_body=render_template('email/reset_password.txt',
 NameError: name 'render_template' is not defined
 2020-02-17 13:02:49,806 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:51]
+2020-02-17 13:32:23,079 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:54]
