@@ -6,7 +6,7 @@ from flask_babel import get_locale
 from guess_language import guess_language
 from app import db
 from app.main.forms import EditProfileForm, PostForm
-from app.models import User, Post, Message
+from app.models import User, Post, Message, Notification
 from app.main import bp
 from app.main.forms import SearchForm, MessageForm
 
@@ -174,7 +174,7 @@ def messages():
                            next_url=next_url, prev_url=prev_url)
 
 
-@bp.route('notifications')
+@bp.route('/notifications')
 @login_required
 def notifications():
     since = request.args.get('since', 0.0, type=float)
@@ -186,3 +186,14 @@ def notifications():
         'data': n.get_data(),
         'timestamp': n.timestamp
     } for n in notifications])
+
+
+@bp.route('/export_posts')
+@login_required
+def export_posts():
+    if current_user.get_task_in_progress('export_posts'):
+        flash('An export task is currently in progress')
+    else:
+        current_user.launch_task('export_posts', 'Exporting posts...')
+        db.session.commit()
+    return redirect(url_for('main.user', username=current_user.username))

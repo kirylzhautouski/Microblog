@@ -11,3 +11,4 @@ Flask-Moment==0.9.0
 Flask-Babel==1.0.0
 elasticsearch==7.5.1
 guess-language-spirit==0.5.3
+rq==1.2.2

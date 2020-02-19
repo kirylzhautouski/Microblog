@@ -1,25 +1,4 @@
-2020-02-18 10:40:14,038 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:71]
-2020-02-18 10:40:16,207 ERROR: Exception on / [GET] [in /home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 1947, in full_dispatch_request
-    rv = self.preprocess_request()
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 2241, in preprocess_request
-    rv = func()
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/app/main/routes.py", line 18, in before_request
-    g.locale = str(get_locale())
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask_babel/__init__.py", line 247, in get_locale
-    babel = current_app.extensions['babel']
-KeyError: 'babel'
-2020-02-18 10:41:37,221 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:74]
-2020-02-18 10:41:50,278 ERROR: Exception on / [GET] [in /home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py:1891]
+2020-02-19 09:28:43,895 ERROR: Exception on /follow/kirillzhelt [GET] [in /home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -35,40 +14,91 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/app/main/routes.py", line 45, in index
-    prev_url=prev_url)
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
-    ctx.app,
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/app/main/routes.py", line 109, in follow
+    flash('You are following %(username)s!', username=username)
+TypeError: flash() got an unexpected keyword argument 'username'
+2020-02-19 09:31:04,784 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:78]
+2020-02-19 09:50:50,111 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:78]
+2020-02-19 09:51:03,026 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:78]
+2020-02-19 10:45:33,031 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:78]
+2020-02-19 10:52:15,740 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:78]
+2020-02-19 11:03:42,887 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:78]
+2020-02-19 11:03:46,877 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:78]
+2020-02-19 11:39:21,733 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:83]
+2020-02-19 11:39:45,448 ERROR: Exception on /user/kirillzhelt [GET] [in /home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/app/main/routes.py", line 77, in user
+    next_url=next_url, prev_url=prev_url)
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/jinja2/loaders.py", line 129, in load
+    code = environment.compile(source, name, filename)
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
   File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
     reraise(*rewrite_traceback_stack(source=source))
   File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/app/templates/index.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 3, in block "doc"
-    <html{% block html_attribs %}{% endblock html_attribs %}>
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 11, in block "html"
-    {%- endblock metas %}
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 12, in block "body"
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/app/templates/base.html", line 17, in block "navbar"
-    <a class="navbar-brand" href="{{ url_for('index') }}">Microblog</a>
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 2215, in handle_url_build_error
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/app/templates/user.html", line 53, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
+2020-02-19 11:39:57,359 ERROR: Exception on /notifications [GET] [in /home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
     reraise(exc_type, exc_value, tb)
   File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/werkzeug/routing.py", line 2179, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
-2020-02-18 10:43:05,112 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:74]
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/app/main/routes.py", line 181, in notifications
+    notifications = current_user.notifications.filter(Notification.timestamp > since) \
+NameError: name 'Notification' is not defined
+2020-02-19 11:40:07,368 ERROR: Exception on /notifications [GET] [in /home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/env/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kiryl/dev/edupurposes/flask-tutorial/app/main/routes.py", line 181, in notifications
+    notifications = current_user.notifications.filter(Notification.timestamp > since) \
+NameError: name 'Notification' is not defined
+2020-02-19 11:40:24,949 INFO: Microblog startup [in /home/kiryl/dev/edupurposes/flask-tutorial/app/__init__.py:83]
+2020-02-19 11:40:32,180 INFO: Microblog startup [in ./app/__init__.py:83]
